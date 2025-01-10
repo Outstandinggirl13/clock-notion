@@ -11,6 +11,14 @@
     --main-text-color: #009688;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
 .clock  {
     font-family: "Bebas Neue";
     color: var(--main-text-color);
@@ -39,4 +47,39 @@
 
 .clock-day {
     text-align: right;
+}
+
+.set-colors {
+  background-color: var(--clock-color);
+  border: 2px solid var(--main-text-color);
+  border-radius: 16px;
+  box-shadow: var(--main-text-color) 4px 4px 0 0;
+  color: var(--main-text-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 0 16px;
+  line-height: 150%;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  display: none;
+}
+
+.set-colors:hover {
+  background-color: #fff;
+}
+
+.set-colors:active {
+  box-shadow: var(--main-text-color) 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .set-colors {
+    min-width: 120px;
+    padding: 0 25px;
+  }
 }
