@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clock-color: #EEEEEE;
+    --main-text-color: #009688;
+}
+
+.clock  {
+    font-family: "Bebas Neue";
+    color: var(--main-text-color);
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    width: fit-content;
+}
+
+.clock-left, .clock-right {
+    background-color: var(--clock-color);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.time-element {
+    font-size: 128px;
+    font-weight: 600;
+    line-height: 120%;
+    text-decoration: line-through 1px var(--clock-color);
+}
+
+.clock-meridiem, .clock-day {
+    line-height: 100%;
+}
+
+.clock-day {
+    text-align: right;
+}
