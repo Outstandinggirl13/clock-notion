@@ -6,22 +6,22 @@ const clockDay = document.querySelector(".clock-day");
 
 const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-function startTime () {
+function startClock () {
     const today = new Date();
     let wd = weekDays[today.getDay()];
     let h = today.getHours();
     let m = today.getMinutes();
     let s = today.getSeconds();
     h = checkMeridiem(h);
-    h = checkTime (h);
+    clocMeridiem.innerText = h[1];
+    h = checkTime(h[0]);
     m = checkTime(m);
     s = checkTime(s);
-    clockHours.innerText = h[0];
+    clockHours.innerText = h;
     clockMinutes.innerText = m;
-    clocMeridiem.innerText = h[1];
     clockSeconds.innerText = s;
     clockDay.innerText = wd;
-    setTimeout(startTime, 1000);
+    setTimeout(startClock, 1000);
 }
 
 function checkTime(x) {
@@ -34,4 +34,4 @@ function checkMeridiem(x, y = "AM") {
     return [x, y];
 }
 
-window.addEventListener('load', startTime());
+window.addEventListener('load', startClock());
