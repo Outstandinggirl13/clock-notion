@@ -9,7 +9,7 @@
 :root {
     --clock-color: #EEEEEE;
     --main-text-color: #1e1e1e;
-    --width: 100vw;
+    --height: 100vh; /*set to the height of the viewport*/
 }
 
 .clock {
@@ -19,7 +19,7 @@
     flex-direction: row;
     justify-content: center;
     gap: 2%;
-    width: var(--width);
+    height: var(--height);
     aspect-ratio: 4/3; /*width to height ratio is 4 : 3*/
     /*width: fit-content;*/ /*you can use this property instead of aspect-ratio*/
 }
@@ -37,14 +37,14 @@ ELEMENT INSIDE ANOTHER ELEMENT?*/
 }
 
 .time-element {
-    font-size: calc(var(--width) * 0.5); /*calculate the font size based on height variable*/
+    font-size: calc(var(--height) * 0.7); /*calculate the font size based on height variable*/
     font-weight: 600;
     line-height: 120%;
     text-decoration: line-through 1% var(--clock-color);
 }
 
 .clock-meridiem, .clock-day {
-    font-size: calc(var(--width) * 0.08);
+    font-size: calc(var(--height) * 0.1);
     line-height: 100%;
 }
 
