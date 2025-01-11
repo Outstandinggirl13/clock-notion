@@ -2,14 +2,14 @@
 
 *{
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
 }
 
 :root {
     --clock-color: #EEEEEE;
     --main-text-color: #1e1e1e;
-    --height: 90vh; /*set to the height of the viewport*/
+    --width: 100vw;
 }
 
 .clock {
@@ -19,10 +19,13 @@
     flex-direction: row;
     justify-content: center;
     gap: 2%;
-    height: var(--height);
+    width: var(--width);
     aspect-ratio: 4/3; /*width to height ratio is 4 : 3*/
     /*width: fit-content;*/ /*you can use this property instead of aspect-ratio*/
 }
+
+/*MEDIA QUERY?
+ELEMENT INSIDE ANOTHER ELEMENT?*/
 
 
 .clock-left, .clock-right {
@@ -30,18 +33,18 @@
     height: 100%;
     width: 100%;
     padding: 4%; /*4% from the parent's width*/
-    border-radius: 4%;
+    border-radius: 6%;
 }
 
 .time-element {
-    font-size: calc(var(--height) * 0.7); /*calculate the font size based on height variable*/
+    font-size: calc(var(--width) * 0.5); /*calculate the font size based on height variable*/
     font-weight: 600;
     line-height: 120%;
     text-decoration: line-through 1% var(--clock-color);
 }
 
 .clock-meridiem, .clock-day {
-    font-size: calc(var(--height) * 0.1);
+    font-size: calc(var(--width) * 0.08);
     line-height: 100%;
 }
 
