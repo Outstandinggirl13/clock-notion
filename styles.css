@@ -9,7 +9,7 @@
 :root {
     --clock-color: #EEEEEE;
     --main-text-color: #1e1e1e;
-    --height: 96vh; /*set to the height of the viewport*/
+    --height: 90vh; /*set to the height of the viewport*/
 }
 
 .clock {
