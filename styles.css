@@ -12,6 +12,10 @@
     --height: 100vh; /*set to the height of the viewport*/
 }
 
+body {
+    overflow: hidden;
+}
+
 .clock {
     font-family: "Bebas Neue";
     color: var(--main-text-color);
